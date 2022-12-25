@@ -1,12 +1,9 @@
 ---
+layout: post
 title: "Adding swagger to ASP.NET Web.Api"
 date: "2017-02-03"
-categories: 
-  - "net"
-  - "asp-net"
-  - "owin"
-  - "swagger"
-  - "web-api-2"
+categories: [net,asp-net,owin,swagger,web-api-2]
+published: false
 ---
 Sounds easy right? But it turn to be very confusing. When I first tried to integrate [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle) I met few problems:
 
