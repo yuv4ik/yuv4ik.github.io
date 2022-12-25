@@ -8,9 +8,6 @@ categories:
   - "swagger"
   - "web-api-2"
 ---
-
-  
-
 Sounds easy right? But it turn to be very confusing. When I first tried to integrate [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle) I met few problems:
 
 1. Auto generated documentation totally ignored existing and working API endpoints (methods in ApiControllers). So it was totally empty.
