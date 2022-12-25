@@ -25,7 +25,7 @@ That should generate _SwaggerConfig.cs_ under _App\_Start_ folder:
 
   
 
-[![swashbuckle swagger](/images/2017-02-03-adding-swagger-to-asp-net-web-api/2.jpg)![swashbuckle swagger](/images/2017-02-03-adding-swagger-to-asp-net-web-api/3.jpg)![](/images/2017-02-03-adding-swagger-to-asp-net-web-api/4.jpg)![](/images/2017-02-03-adding-swagger-to-asp-net-web-api/5.jpg)![](/images/2017-02-03-adding-swagger-to-asp-net-web-api/6.jpg)
+![swashbuckle swagger](/images/2017-02-03-adding-swagger-to-asp-net-web-api/2.jpg)![swashbuckle swagger](/images/2017-02-03-adding-swagger-to-asp-net-web-api/3.jpg)![](/images/2017-02-03-adding-swagger-to-asp-net-web-api/4.jpg)![](/images/2017-02-03-adding-swagger-to-asp-net-web-api/5.jpg)![](/images/2017-02-03-adding-swagger-to-asp-net-web-api/6.jpg)
 
   
 Good luck!  
