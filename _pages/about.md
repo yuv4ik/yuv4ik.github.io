@@ -4,26 +4,12 @@ title: About
 permalink: /about/
 ---
 
-[Reverie](https://github.com/amitmerchant1990/reverie) is a Jekyll theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for [my blog](https://www.amitmerchant.com).
+My professional career started in early 2010, since then I have been involved in multiple enterprise solutions on a different levels: web, mobile, backend, background services and DB. I have been architecting and developing performance critical services and big data sync / migration tools. Developing e-commerce solutions, native mobile and cross-platform self service applications for well known mobile operators. Using SSIS to move enormous amount of data from MySQL to MSSQL within a very tight timeframe while converting and formatting the data. Building scalable backend solutions on Azure and using Intune to distribute enterprise mobile solutions.
 
-This is a plug-and-play Jekyll theme which you can use on GitHub Pages without even setting up a local environment.
+I am former [Microsoft MVP](https://mvp.microsoft.com/en-us/PublicProfile/5003295?fullName=Evgeny%20Zborovsky) for being passionate about Xamarin and to be more specific Xamarin.Forms. I have been contributing by reporting bugs, developing Visual Studio extensions, sharing my experience with the community and collaborating in open source projects.
 
-## Features
+My current passion is Team Leading - being efficiency, growth, success and people oriented is my nature.
 
-- Command-line free fork-first workflow, using GitHub.com to create, customize and post to your blog
-- Fully responsive and mobile optimized base theme
-- Sass/Coffeescript support using Jekyll 2.0
-- Free hosting on your GitHub Pages user site
-- All the SEO goodies comes in-built
-- Markdown blogging
-- Syntax highlighting using Pygments
-    - [Dracula syntax theme](https://draculatheme.com/) included
-- Disqus commenting
-- Google Analytics integration
-- Fuzzy search across blog posts
-- Pagination of posts works out-of-the-box.
-- Categorize posts out-of-the box
-- RSS Feed
-- In-built sitemap
+I always welcome new ideas and eager to learn.
 
-Learn more about it [here](https://github.com/amitmerchant1990/reverie) on how to get started.
+Do not hesitate to contact me: [Twitter](https://twitter.com/ezborovsky), [LinkedIn](http://www.linkedin.com/in/evsky/) & [GitHub](https://github.com/yuv4ik). 
