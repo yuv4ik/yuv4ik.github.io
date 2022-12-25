@@ -25,7 +25,7 @@ That should generate _SwaggerConfig.cs_ under _App\_Start_ folder:
 
   
 
-[![swashbuckle swagger](images/2.jpg)![swashbuckle swagger](images/3.jpg)![](images/4.jpg)![](images/5.jpg)![](images/6.jpg)![](https://smellyc0de.files.wordpress.com/2017/02/6.jpg?w=300)](https://smellyc0de.files.wordpress.com/2017/02/1.jpg)
+[![swashbuckle swagger](/images/2.jpg)![swashbuckle swagger](/images/3.jpg)![](/images/4.jpg)![](/images/5.jpg)![](/images/6.jpg)![](https://smellyc0de.files.wordpress.com/2017/02/6.jpg?w=300)](https://smellyc0de.files.wordpress.com/2017/02/1.jpg)
 
   
 Good luck!  
