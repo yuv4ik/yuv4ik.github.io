@@ -1,11 +1,8 @@
 ---
+layout: post
 title: "Enterprise and small mistakes made in ASP.NET Web.API"
 date: "2017-02-07"
-categories: 
-  - "net"
-  - "asp-net"
-  - "smelly-code"
-  - "web-api-2"
+categories: [net,asp-net,smelly-code,web-api-2]
 ---
 
 ![](/images/2017-02-07-enterprise-and-small-mistakes-made-in-asp-net-web-api/mistakes-are-proof-trying_daily-inspiration-3-300x300.jpg)
