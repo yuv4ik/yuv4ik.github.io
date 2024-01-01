@@ -9,7 +9,7 @@ name: Evgeny Zborovsky
 author: Evgeny Zborovsky
 
 # Short bio or description (displayed in the header)
-description: iOS Team Lead | Former Microsoft MVP
+description: Engineering Manager | Former Microsoft MVP
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://secure.gravatar.com/avatar/b8a0ab8445fafb38afdf26cb976df32f?s=160&d=identicon&r=g
@@ -89,7 +89,7 @@ plugins:
 
 include: ['_pages']
 
-paginate: 6
+paginate: 10
 paginate_path: /page:num/
 
 # Exclude these files from your production _site
