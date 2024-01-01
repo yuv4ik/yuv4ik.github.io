@@ -8,7 +8,7 @@ My professional career started in early 2010, since then I have been involved in
 
 I am former [Microsoft MVP](https://mvp.microsoft.com/en-us/PublicProfile/5003295?fullName=Evgeny%20Zborovsky) for being passionate about Xamarin and to be more specific Xamarin.Forms. I have been contributing by reporting bugs, developing Visual Studio extensions, sharing my experience with the community and collaborating in open source projects.
 
-My current passion is Team Leading - being efficiency, growth, success and people oriented is my nature.
+My current passion is Engineering Management - being efficiency, growth, success and people oriented is my nature.
 
 I always welcome new ideas and eager to learn.
 
