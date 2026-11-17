@@ -2,7 +2,7 @@
 layout: post
 title: "Xamarin.Forms Recipe: Label with Letter Spacing"
 date: "2018-05-29"
-categories: [andorid,ios,xamarin-forms,kerning]
+categories: [android,ios,xamarin-forms,kerning]
 ---
 iOS | Android
 ![](/images/2018-05-29-xamarin-forms-recipe-label-with-letter-spacing/1.png) | ![](/images/2018-05-29-xamarin-forms-recipe-label-with-letter-spacing/2.png)

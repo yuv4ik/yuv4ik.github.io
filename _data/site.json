@@ -1,0 +1,66 @@
+{
+  "name": "Evgeny Zborovsky",
+  "author": "Evgeny Zborovsky",
+  "description": "Engineering Manager | Former Microsoft MVP",
+  "tagline": "Engineering Manager · Former Microsoft MVP",
+  "url": "https://evgenyzborovsky.com",
+  "baseurl": "",
+  "lang": "en",
+  "locale": "en_US",
+  "avatar": "https://secure.gravatar.com/avatar/b8a0ab8445fafb38afdf26cb976df32f?s=400&d=identicon&r=g",
+  "disqus": "evsky",
+  "ga4": "G-E839X9V6B9",
+  "paginate": 10,
+  "links": [
+    {
+      "label": "github/",
+      "title": "GitHub",
+      "url": "https://github.com/yuv4ik"
+    },
+    {
+      "label": "linkedin/",
+      "title": "LinkedIn",
+      "url": "https://www.linkedin.com/in/evsky/"
+    },
+    {
+      "label": "twitter/",
+      "title": "Twitter",
+      "url": "https://twitter.com/ezborovsky"
+    },
+    {
+      "label": "stackoverflow/",
+      "title": "Stack Overflow",
+      "url": "https://stackoverflow.com/users/1970317/evz"
+    },
+    {
+      "label": "liamyte.com",
+      "title": "Liamyte OÜ, my company",
+      "url": "https://liamyte.com"
+    },
+    {
+      "label": "apps/",
+      "title": "My iPhone, iPad and Apple Watch apps",
+      "url": "https://apps.liamyte.com"
+    },
+    {
+      "label": "email",
+      "title": "Email",
+      "url": "mailto:yuv4ik@gmail.com"
+    },
+    {
+      "label": "feed.xml",
+      "title": "Atom feed",
+      "url": "/feed.xml"
+    }
+  ],
+  "company": {
+    "name": "Liamyte OÜ",
+    "url": "https://liamyte.com"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/evsky/",
+    "https://github.com/yuv4ik",
+    "https://twitter.com/ezborovsky",
+    "https://stackoverflow.com/users/1970317/evz"
+  ]
+}

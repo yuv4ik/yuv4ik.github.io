@@ -1,11 +1,39 @@
+# evgenyzborovsky.com
 
-## Blog
+Personal blog of Evgeny Zborovsky, built with [Eleventy](https://www.11ty.dev/) and hosted on GitHub Pages.
 
-My personal blog build with [Jekyll](https://jekyllrb.com/) using [Reverie](https://github.com/amitmerchant1990/reverie) template.
+## Run locally
 
-## Notes
+Requires Node.js 22 or newer.
 
-Recently I migrated from WP-dot-com, in case you find not working links, typos or formatting issues please let me know.
+```sh
+npm ci
+npm start        # http://localhost:8080, rebuilds on save
+npm run build    # production build into _site/
+```
 
-## License
-CC BY-NC 4.0
+Google Analytics is only included in production builds (`npm run build`), never while serving locally.
+
+## Writing a post
+
+Add `_posts/YYYY-MM-DD-title.md`:
+
+```markdown
+---
+title: "Post title"
+date: "YYYY-MM-DD"
+categories: [xamarin-forms, ios]
+---
+
+First paragraph becomes the page description.
+```
+
+The URL is `/YYYY/MM/DD/title/`, taken from the file name. Posts can use the Jekyll-style tags `{% highlight csharp %}…{% endhighlight %}`, `{% post_url YYYY-MM-DD-title %}` and `{% gist id %}`, or fenced code blocks.
+
+## Deploying
+
+Pushing to `main` builds and deploys through `.github/workflows/deploy.yml`. Pull requests are built but not deployed.
+
+## Licence
+
+Content is licensed under [CC BY-NC 4.0](LICENSE.md). JetBrains Mono is used under the SIL Open Font License 1.1 (`assets/fonts/OFL.txt`).

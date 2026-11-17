@@ -2,7 +2,7 @@
 layout: post
 title: "Android emulators stopped working on macOS 10.13 (High Sierra)"
 date: "2017-12-12"
-categories: [.net.android,xamarin,xamarin-forms]
+categories: [.net,android,xamarin,xamarin-forms]
 ---
 
 Recently I updated my macOS to High Sierra however this broke my android emulators. Non of them started and logs showed something like:

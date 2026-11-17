@@ -2,7 +2,7 @@
 layout: post
 title: "JSON.net Mastering enums"
 date: "2017-03-21"
-categories: [net,c#,json-net,xamarin]
+categories: [.net,c#,json-net,xamarin]
 ---
 ### Problem
 Legacy backend API endpoint returns JSON with units in an uncommon manner.  

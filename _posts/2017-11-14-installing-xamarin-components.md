@@ -2,7 +2,7 @@
 layout: post
 title: "Installing Xamarin components"
 date: "2017-11-14"
-categories: [net,visual-studio,visual-studio-for-mac,xamarin,xamarin-forms]
+categories: [.net,visual-studio,visual-studio-for-mac,xamarin,xamarin-forms]
 ---
 
 Xamarin components are easy to install, all you have to do is to download a zip, extract the content and to reference the dlls in your project. This would work if you download the component manually from components gallery. Same thing can be done using Visual Studio in a more robust way via 'Components' under the targeting platform projects. Either way, the component will be downloaded and installed only for a specific project.

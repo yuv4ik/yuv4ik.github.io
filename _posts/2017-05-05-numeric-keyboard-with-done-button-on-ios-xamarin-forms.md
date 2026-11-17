@@ -2,7 +2,7 @@
 layout: post
 title: "Numeric keyboard with &quot;Done&quot; button on iOS Xamarin.Forms"
 date: "2017-05-05"
-categories: [net,c#,ios,xamarin-forms]
+categories: [.net,c#,ios,xamarin-forms]
 ---
 ![](/images/2017-05-05-numeric-keyboard-with-done-button-on-ios-xamarin-forms/1.png)
 

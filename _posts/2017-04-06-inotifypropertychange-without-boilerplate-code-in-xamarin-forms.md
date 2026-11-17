@@ -2,7 +2,7 @@
 layout: post
 title: "INotifyPropertyChange without boilerplate code in Xamarin.Forms"
 date: "2017-04-06"
-categories: [net,c#,xamarin]
+categories: [.net,c#,xamarin]
 ---
 Implementing [INotifyPropertyChange](https://msdn.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged(v=vs.110).aspx) is pretty straightforward. Usually, you create a base ViewModel class which implements it and which usually contains RaisePropertyChanged method:
 

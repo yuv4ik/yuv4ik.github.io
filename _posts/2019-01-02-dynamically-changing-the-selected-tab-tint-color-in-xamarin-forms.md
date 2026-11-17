@@ -22,7 +22,7 @@ Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.SetBarSelectedIte
 {% endhighlight %}
 ### iOS
 
-![ios](/images/2019-01-02-dynamically-changing-the-selected-tab-tint-color-in-xamarin-forms/2.gif)
+![ios](/images/2019-01-02-dynamically-changing-the-selected-tab-tint-color-in-xamarin-forms/1.gif)
 
 Unfortunately on iOS we have to implement the solution ourselves. Luckily there is a [TintColor](https://developer.apple.com/documentation/uikit/uitabbar/1623460-tintcolor) property on a `UITabBar` that we can use.
 

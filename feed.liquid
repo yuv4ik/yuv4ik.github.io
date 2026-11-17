@@ -1,0 +1,28 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.name | xml_escape }}</title>
+  <subtitle>{{ site.description | xml_escape }}</subtitle>
+  <link href="{{ site.url }}/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="{{ site.url }}/" rel="alternate" type="text/html"/>
+  <id>{{ site.url }}/feed.xml</id>
+  <updated>{{ collections.postsDesc[0].date | date_fmt: 'rfc3339' }}</updated>
+  <author><name>{{ site.author | xml_escape }}</name></author>
+{%- for post in collections.postsDesc limit: 10 %}
+  <entry>
+    <title type="html">{{ post.data.title | xml_escape }}</title>
+    <link href="{{ site.url }}{{ post.url }}" rel="alternate" type="text/html" title="{{ post.data.title | xml_escape }}"/>
+    <id>{{ site.url }}{{ post.url }}</id>
+    <published>{{ post.date | date_fmt: 'rfc3339' }}</published>
+    <updated>{{ post.date | date_fmt: 'rfc3339' }}</updated>
+    {%- for c in post.data.categories %}
+    <category term="{{ c | xml_escape }}"/>
+    {%- endfor %}
+    <summary type="html">{{ post.rawInput | excerpt_text | xml_escape }}</summary>
+    <content type="html" xml:base="{{ site.url }}{{ post.url }}">{{ post.content | absolute_urls: site.url | xml_escape }}</content>
+  </entry>
+{%- endfor %}
+</feed>

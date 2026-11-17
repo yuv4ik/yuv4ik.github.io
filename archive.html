@@ -1,0 +1,21 @@
+---
+layout: default
+title: Posts Archive
+permalink: /archive/
+description: Every post on the blog, newest first, grouped by year.
+---
+<header class="page-head">
+  <p class="prompt"><span class="ps">$</span> tree posts/ <span class="dim">— {{ collections.posts.size }} posts</span></p>
+  <h1>Archive</h1>
+  <p class="dim">Every post, newest first. Browse by <a href="/categories/">category</a> or <a href="/search/">search</a>.</p>
+</header>
+{%- for group in collections.postsByYear %}
+<section class="year" aria-labelledby="y{{ group.year }}">
+  <h2 id="y{{ group.year }}" class="year-head">{{ group.year }}/ <span class="dim">{{ group.posts.size }} posts</span></h2>
+  <ol class="rows">
+    {%- for post in group.posts %}
+    <li><a class="row" href="{{ post.url }}"><time class="row-date" datetime="{{ post.date | date_fmt: 'iso' }}">{{ post.date | date_fmt: 'iso' }}</time><span class="row-title">{{ post.data.title }}</span></a></li>
+    {%- endfor %}
+  </ol>
+</section>
+{%- endfor %}

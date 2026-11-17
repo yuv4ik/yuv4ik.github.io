@@ -1,0 +1,25 @@
+---
+layout: default
+title: Categories
+permalink: /categories/
+description: Posts grouped by category.
+---
+<header class="page-head">
+  <p class="prompt"><span class="ps">$</span> ls tags/ <span class="dim">— {{ collections.categoryList.size }} categories</span></p>
+  <h1>Categories</h1>
+  <ul class="tags tags-cloud">
+    {%- for cat in collections.categoryList %}
+    <li><a href="#{{ cat.slug }}">#{{ cat.name }} <span class="dim">{{ cat.posts.size }}</span></a></li>
+    {%- endfor %}
+  </ul>
+</header>
+{%- for cat in collections.categoryList %}
+<section class="year" aria-labelledby="{{ cat.slug }}">
+  <h2 id="{{ cat.slug }}" class="year-head">#{{ cat.name }} <span class="dim">{{ cat.posts.size }}</span></h2>
+  <ol class="rows">
+    {%- for post in cat.posts %}
+    <li><a class="row" href="{{ post.url }}"><time class="row-date" datetime="{{ post.date | date_fmt: 'iso' }}">{{ post.date | date_fmt: 'iso' }}</time><span class="row-title">{{ post.data.title }}</span></a></li>
+    {%- endfor %}
+  </ol>
+</section>
+{%- endfor %}
