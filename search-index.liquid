@@ -1,0 +1,9 @@
+---
+permalink: /search.json
+eleventyExcludeFromCollections: true
+---
+[
+{%- for post in collections.postsDesc %}
+  {"title": {{ post.data.title | json }}, "url": {{ post.url | json }}, "category": {{ post.data.categories | join: ", " | json }}, "date": {{ post.date | date_fmt | json }}}{% unless forloop.last %},{% endunless %}
+{%- endfor %}
+]

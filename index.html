@@ -1,49 +1,66 @@
 ---
 layout: default
+pagination:
+  data: collections.postsDesc
+  size: 10
+  alias: posts
+permalink: "{% if pagination.pageNumber == 0 %}/{% else %}/page{{ pagination.pageNumber | plus: 1 }}/{% endif %}"
+eleventyComputed:
+  title: "{% if pagination.pageNumber > 0 %}Posts, page {{ pagination.pageNumber | plus: 1 }}{% endif %}"
 ---
-
-<div class="posts">
-  {% for post in paginator.posts %}
-    <article class="post">
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        <h1>{{ post.title }}</h1>
-
-        <div>
-          <p class="post_date">{{ post.date | date: "%B %e, %Y" }}</p>
-        </div>
-      </a>
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-
-  <!-- pagination -->
-  {% if paginator.total_pages > 1 %}
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-    {% else %}
-      <span>&laquo; Prev</span>
-    {% endif %}
-
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <span class="webjeda">{{ page }}</span>
-      {% elsif page == 1 %}
-        <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-      {% else %}
-        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
-    {% endfor %}
-
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-    {% else %}
-      <span>Next &raquo;</span>
-    {% endif %}
+{%- assign total = collections.posts.size -%}
+{%- if pagination.pageNumber == 0 %}
+<section class="term" aria-labelledby="whoami">
+  <div class="term-bar" aria-hidden="true"><span></span><span></span><span></span><em>zsh — ~/evgenyzborovsky.com</em></div>
+  <div class="term-body">
+    <div class="cmd">
+      <p class="prompt"><span class="ps">$</span> whoami</p>
+      <h1 id="whoami" class="hero-name">{{ site.name }}</h1>
+      <p class="dim">{{ site.tagline }}</p>
+    </div>
+    <div class="cmd">
+      <p class="prompt"><span class="ps">$</span> cat about.txt</p>
+      <p class="hero-about">Career started in early 2010. Enterprise work at every level: web, mobile, backend, background services and databases. Performance-critical services, big-data sync and migration tools, self-service apps for well-known mobile operators, scalable cloud backends. Former Microsoft MVP for Xamarin.Forms. Now practising penetration testing and running <a href="https://liamyte.com">Liamyte</a>. <a href="/about/">more&nbsp;→</a></p>
+    </div>
+    <div class="cmd">
+      <p class="prompt"><span class="ps">$</span> ls ~/links</p>
+      <ul class="inline-list">
+        {%- for l in site.links %}
+        <li><a href="{{ l.url }}"{% if l.url contains "://" %} rel="me noopener"{% endif %} title="{{ l.title }}">{{ l.label }}</a></li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <p class="prompt" aria-hidden="true"><span class="ps">$</span> <span class="cursor"></span></p>
   </div>
-  {% endif %}
-</div>
+</section>
+{%- else %}
+<header class="page-head">
+  <p class="prompt"><span class="ps">$</span> ls -lt posts/ | page {{ pagination.pageNumber | plus: 1 }}</p>
+  <h1>Posts, page {{ pagination.pageNumber | plus: 1 }} of {{ pagination.pages.size }}</h1>
+</header>
+{%- endif %}
+
+<section class="listing" aria-labelledby="latest">
+  <h2 id="latest" class="prompt"><span class="ps">$</span> ls -lt posts/ <span class="dim">— {{ total }} posts</span></h2>
+  <ol class="rows">
+    {%- for post in posts %}
+    <li>
+      <a class="row" href="{{ post.url }}">
+        <time class="row-date" datetime="{{ post.date | date_fmt: 'iso' }}">{{ post.date | date_fmt: 'iso' }}</time>
+        <span class="row-title">{{ post.data.title }}</span>
+        <span class="row-tags">{% for c in post.data.categories limit: 3 %}#{{ c }} {% endfor %}</span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ol>
+  <nav class="pagination" aria-label="Pages">
+    {%- if pagination.href.previous %}<a class="btn" href="{{ pagination.href.previous }}" rel="prev">← newer</a>{% endif %}
+    <ul class="page-nums">
+      {%- for href in pagination.hrefs %}
+      <li><a href="{{ href }}"{% if forloop.index0 == pagination.pageNumber %} aria-current="page"{% endif %}>{{ forloop.index }}</a></li>
+      {%- endfor %}
+    </ul>
+    {%- if pagination.href.next %}<a class="btn" href="{{ pagination.href.next }}" rel="next">older →</a>{% endif %}
+  </nav>
+  <p class="more"><a href="/archive/">ls posts/ — all {{ total }}</a> <a href="/categories/" class="dim">ls tags/</a></p>
+</section>

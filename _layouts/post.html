@@ -1,39 +1,46 @@
 ---
 layout: default
+is_post: true
 ---
+{%- assign words = content | read_minutes -%}
+<article class="post">
+  <header class="page-head">
+    <p class="prompt"><span class="ps">$</span> cat posts/{{ page.fileSlug }}.md</p>
+    <h1>{{ title }}</h1>
+    <p class="meta"><time datetime="{{ page.date | date_fmt: 'iso' }}">{{ page.date | date_fmt }}</time><span aria-hidden="true"> · </span>{{ words }} min read</p>
+    {%- if categories.size > 0 %}
+    <ul class="tags" aria-label="Categories">
+      {%- for c in categories %}
+      <li><a href="/categories/#{{ c | category_slug: collections.categoryList }}">#{{ c }}</a></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </header>
 
-<article class="post detailed">
-  <h1>{{ page.title }}</h1>
-
-  <div>
-    <p class="author_title">{{site.author}}  ·  {{ page.date | date: "%B %e, %Y" }}</p>
-    {% if page.last_modified_at %}
-    <p class="author_title" datetime="{{ page.last_modified_at | date_to_xmlschema }}">(Updated: {{ page.last_modified_at | date: "%b %-d, %Y" }})</p>
-    {% endif %}
-    <div class="post-tags">
-      {% if post %}
-        {% assign categories = post.categories %}
-      {% else %}
-        {% assign categories = page.categories %}
-      {% endif %}
-      {% for category in categories %}
-        <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
-        {% unless forloop.last %}&nbsp;{% endunless %}
-      {% endfor %}
-    </div>
-  </div>
-    
-  <div class="entry">
-    {{ content }}
+  <div class="entry prose">
+{{ content }}
   </div>
 
-  <div>
-    <p><span class="share-box">Share:</span> <a href="http://twitter.com/share?text={{ page.title }}&url={{site.url}}{{page.url}}" target="_blank">Twitter</a>, <a href="https://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}" target="_blank">Facebook</a></p>
-  </div>
-
-  <!--<div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>-->
-
-  {% include disqus.html %}
+  <footer class="post-foot">
+    {%- assign share_url = site.url | append: page.url | url_encode -%}
+    {%- assign share_text = title | url_encode -%}
+    <p class="share"><span class="dim">share:</span>
+      <a href="https://twitter.com/intent/tweet?text={{ share_text }}&amp;url={{ share_url }}" rel="noopener noreferrer" target="_blank">twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ share_url }}" rel="noopener noreferrer" target="_blank">linkedin</a>
+      <a href="https://www.facebook.com/sharer.php?u={{ share_url }}" rel="noopener noreferrer" target="_blank">facebook</a>
+    </p>
+    {%- assign prev = collections.posts | getPreviousCollectionItem: page -%}
+    {%- assign next = collections.posts | getNextCollectionItem: page -%}
+    <nav class="pager" aria-label="More posts">
+      {%- if prev %}<a class="pager-prev" href="{{ prev.url }}"><span class="dim">← older</span>{{ prev.data.title }}</a>{% endif %}
+      {%- if next %}<a class="pager-next" href="{{ next.url }}"><span class="dim">newer →</span>{{ next.data.title }}</a>{% endif %}
+    </nav>
+    {%- if site.disqus %}
+    <section class="comments" aria-label="Comments">
+      <button type="button" class="btn" data-disqus="{{ site.disqus }}">$ load comments <span class="dim">(Disqus)</span></button>
+      <p class="dim small">Comments are loaded from Disqus only when you ask for them.</p>
+      <div id="disqus_thread"></div>
+    </section>
+    {%- endif %}
+  </footer>
 </article>

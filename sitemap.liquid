@@ -1,0 +1,24 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for item in collections.all %}
+{%- assign last = item.url | slice: -1 %}
+{%- if item.url and last == "/" %}
+  <url>
+    <loc>{{ site.url }}{{ item.url }}</loc>
+    {%- if item.data.tags contains "posts" %}
+    <lastmod>{{ item.date | date_fmt: 'iso' }}</lastmod>
+    {%- endif %}
+  </url>
+{%- endif %}
+{%- endfor %}
+{%- assign pages = collections.posts.size | divided_by: site.paginate | ceil %}
+{%- if pages > 1 %}{% for n in (2..pages) %}
+  <url>
+    <loc>{{ site.url }}/page{{ n }}/</loc>
+  </url>
+{%- endfor %}{% endif %}
+</urlset>

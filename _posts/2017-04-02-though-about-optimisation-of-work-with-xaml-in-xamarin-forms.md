@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Though about optimisation of work with XAML in Xamarin.Forms"
+title: "Thoughts about optimisation of work with XAML in Xamarin.Forms"
 date: "2017-04-02"
 categories: [visual-studio-for-mac,xamarin,xaml]
 ---

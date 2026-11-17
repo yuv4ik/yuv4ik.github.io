@@ -15,8 +15,6 @@ In this article we will take a look on VS for Mac "hidden gems" that can optimiz
 
 One of the very basic yet very important settings is the `Font`. While there is nothing bad using the default font, [FiraCode](https://github.com/tonsky/FiraCode) could beautify your code and improve it's readability by replacing sequences of characters by a single ligature.
 
-![](https://camo.githubusercontent.com/3a8948f34284f378ead7af5846aa432035c687ad/687474703a2f2f732e746f6e736b792e6d652f696d67732f666972615f636f64655f6c6f676f2e737667)
-
 The project repository on [github](https://github.com/tonsky/FiraCode) contains detailed information on how to install it in your system. It's also great because this font can be used almost everywhere.
 
 # Projects

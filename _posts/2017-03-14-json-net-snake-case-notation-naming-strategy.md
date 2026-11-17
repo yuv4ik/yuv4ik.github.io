@@ -2,7 +2,7 @@
 layout: post
 title: "JSON.net snake case notation naming strategy"
 date: "2017-03-14"
-categories: [net,c#,json-net,xamarin]
+categories: [.net,c#,json-net,xamarin]
 ---
 
 Communicating with backend in JSON can be challenging.  

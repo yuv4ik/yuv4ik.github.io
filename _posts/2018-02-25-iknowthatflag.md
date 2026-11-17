@@ -2,7 +2,7 @@
 layout: post
 title: "IKnowThatFlag quiz game build with Xamarin.Forms"
 date: "2018-02-25"
-categories: [android,ios,game,xamairn-forms]
+categories: [android,ios,game,xamarin-forms]
 ---
 
 Many years ago when I was at high school, I wrote a bot for a web browser flags quiz game, where a flag of a random country and 4 different country names where shown to the player. It was fun!

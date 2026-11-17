@@ -1,0 +1,18 @@
+---
+layout: default
+title: Search
+permalink: /search/
+description: Search the blog posts by title or category.
+---
+<header class="page-head">
+  <p class="prompt"><span class="ps">$</span> grep -ri <span class="dim">"…"</span> posts/</p>
+  <h1>Search</h1>
+</header>
+<form class="search" action="/search/" method="get" role="search">
+  <label for="q" class="prompt"><span class="ps">$</span> grep -ri</label>
+  <input id="q" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="xamarin, json, facebook…" aria-describedby="search-status">
+</form>
+<p id="search-status" class="dim small" aria-live="polite">Type to search {{ collections.posts.size }} posts by title or category.</p>
+<ol id="search-results" class="rows"></ol>
+<noscript><p>Search needs JavaScript. Browse the <a href="/archive/">archive</a> instead.</p></noscript>
+<script src="/assets/js/search.js" defer></script>

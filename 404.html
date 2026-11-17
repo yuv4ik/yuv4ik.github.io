@@ -1,25 +1,15 @@
 ---
-permalink: /404.html
 layout: default
+title: Page not found
+permalink: /404.html
+eleventyExcludeFromCollections: true
 ---
-
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+<section class="term term-small">
+  <div class="term-body">
+    <p class="prompt"><span class="ps">$</span> cd <span class="dim">this-page</span></p>
+    <p class="err">cd: no such file or directory (404)</p>
+    <h1>Page not found</h1>
+    <p>The page you were looking for doesn't exist or has moved.</p>
+    <p><a class="btn" href="/">cd ~</a> <a class="btn" href="/archive/">ls posts/</a> <a class="btn" href="/search/">grep</a></p>
+  </div>
+</section>

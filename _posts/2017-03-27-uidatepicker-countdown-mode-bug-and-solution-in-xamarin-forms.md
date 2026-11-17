@@ -2,7 +2,7 @@
 layout: post
 title: "UIDatePicker Countdown mode bug and solution in Xamarin.Forms"
 date: "2017-03-27"
-categories: [net,c#,ios,xamarin]
+categories: [.net,c#,ios,xamarin]
 ---
 ### Problem
 Show hh:mm:ss picker on iOS using Xamarin.Forms.

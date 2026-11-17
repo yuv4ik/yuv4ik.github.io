@@ -2,7 +2,7 @@
 layout: post
 title: "Most common mistakes beginners make in Xamarin.Forms"
 date: "2018-03-19"
-categories: [android,ios,visual-studio,visual-studio-for-mac,xamarin-form]
+categories: [android,ios,visual-studio,visual-studio-for-mac,xamarin-forms]
 ---
 
 We live in a great time where technology evolves fast and we need to keep up with it if we want to stay relevant. Beside this, we also have to be productive, use the latest and greatest tools, implement the best available solutions and deliver on time. Following article mentions a list of most common mistakes we tend to do while using Xamarin.Forms.

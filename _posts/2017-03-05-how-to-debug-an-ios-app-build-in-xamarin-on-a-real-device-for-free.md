@@ -2,7 +2,7 @@
 layout: post
 title: "How to debug an iOS app build in Xamarin on a real device for free?"
 date: "2017-03-05"
-categories: [net,apple,ios,visual-studio-for-mac,xamarin]
+categories: [.net,apple,ios,visual-studio-for-mac,xamarin]
 ---
 
 "With Apple's release of Xcode 7 came an important change for all iOS and Mac developers–free provisioning."  
