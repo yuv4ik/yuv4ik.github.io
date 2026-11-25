@@ -24,6 +24,8 @@ Engineering management is a passion of mine. I care about how teams work as much
 
 I run [Liamyte OÜ](https://liamyte.com), a company based in Tartu, Estonia, offering software architecture, offensive security and product development. Under it I also publish my own [iPhone, iPad and Apple Watch apps](https://apps.liamyte.com).
 
+I also built [App Rudder](https://apprudder.com/), a Mac app that helps you understand your App Store Connect analytics, suggests improvements for each app, and tracks how performance changes after a release.
+
 I always welcome new ideas and am eager to learn.
 
 Do not hesitate to contact me: [Twitter](https://twitter.com/ezborovsky), [LinkedIn](http://www.linkedin.com/in/evsky/) & [GitHub](https://github.com/yuv4ik). 
